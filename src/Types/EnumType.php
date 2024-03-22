@@ -13,7 +13,7 @@ class EnumType extends Type
     /**
      * {@inheritdoc}
      */
-    public function getSQLDeclaration(array $fieldDeclaration, AbstractPlatform $platform): string;
+    public function getSQLDeclaration(array $fieldDeclaration, AbstractPlatform $platform): string
     {
         $options = Arr::get($fieldDeclaration, 'options', []);
         $optionsString = count($options) ? "'".implode("','", $options)."'" : "''";
